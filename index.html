@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+  <nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <a href="#">Chùa Mỹ Khê</a>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="#lich-sinh-hoat">Lịch sinh hoạt</a></li>
+      <li><a href="#tu-thien">Từ thiện</a></li>
+      <li><a href="#su-kien">Sự kiện</a></li>
+      <li><a href="#video">Video</a></li>
+    </ul>
+  </div>
+</nav>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Chùa Mỹ Khê | Thanh tịnh - Từ bi - Trí tuệ</title>
@@ -9,6 +22,73 @@
   <!-- Font Awesome 6 (miễn phí) cho icon thuần Phật -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
+    /* Reset mặc định */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Thanh menu */
+  .navbar {
+    background-color: #2c5538;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
+
+  .logo a {
+    color: #f9e0a8;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Segoe UI', 'Times New Roman', serif;
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .nav-menu li a:hover {
+    color: #f9e0a8;
+  }
+
+  /* Responsive cho điện thoại */
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .nav-menu {
+      gap: 1rem;
+      justify-content: center;
+    }
+  }
     * {
       margin: 0;
       padding: 0;
@@ -395,7 +475,7 @@
 
 <main class="container">
   <!-- PHẦN 2: LỊCH SINH HOẠT HẰNG THÁNG (Cards) -->
-  <section>
+  <section id="lich-sinh-hoat">
     <h2 class="section-title">Lịch sinh hoạt hằng tháng</h2>
     <p class="subhead">Các khóa tu, lễ nghi và thời khóa thiền tịnh tại Chùa Mỹ Khê</p>
     <div class="cards-grid">
@@ -443,7 +523,7 @@
   </section>
 
   <!-- PHẦN 3: CHƯƠNG TRÌNH TỪ THIỆN - Phát cơm chay -->
-  <section>
+  <section id="tu-thien">
     <h2 class="section-title">Chương trình từ thiện</h2>
     <p class="subhead">Trao yêu thương, kết nối nhân duyên</p>
     <div class="charity-wrapper">
@@ -456,16 +536,16 @@
         <p>⏰ Thời gian: 10:00 – 12:00 tại cổng chùa.<br>📍 Địa chỉ: Chùa Mỹ Khê (theo thông tin fanpage).<br>🙏 Mọi đóng góp, cúng dường đều được ghi nhận và hồi hướng công đức.</p>
         
         <!-- Đã sửa div thành thẻ a và thêm link Google Form -->
-        <a href="thong tin tu thien.html" class="btn-temple" style="text-decoration: none; display: inline-block;">
-  <i class="fas fa-hands-helping"></i> Cùng chung tay
-</a>
+        <a href="scan/thong tin tu thien.html" class="btn-temple" style="text-decoration: none; display: inline-block;">
+          <i class="fas fa-hands-helping"></i> Cùng chung tay
+        </a>
         
       </div>
     </div>
   </section>
 
   <!-- PHẦN 4: CHƯƠNG TRÌNH SẮP TỚI – ĐẠI LỄ PHẬT ĐẢN -->
-  <section>
+  <section id="su-kien">
     <h2 class="section-title">Chương trình sắp tới</h2>
     <p class="subhead">Sự kiện Phật giáo trọng đại</p>
     <div class="upcoming-wrapper">
@@ -485,7 +565,7 @@
   </section>
 
   <!-- PHẦN 5: THƯ VIỆN VIDEO (YouTube nhúng) -->
-<section>
+<section id="video">
     <h2 class="section-title">Thư viện Video</h2>
     <p class="subhead">Những khoảnh khắc thiêng liêng, livestream giảng pháp và khóa tu tại Chùa Mỹ Khê</p>
     <div class="video-grid">
